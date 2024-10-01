@@ -129,7 +129,7 @@ public class NoSlow extends Module {
                 }
             }
 
-            if (isHoldingPotionAndSword(mc.thePlayer.getHeldItem(), true, false) && mc.thePlayer.isUsingItem() && !KillAura.isBlocking) {
+            if (isHoldingPotionAndSword(mc.thePlayer.getHeldItem(), true, false) && mc.thePlayer.isUsingItem() && !KillAura.isBlocking && mc.thePlayer.getHeldItem().stackSize >= 2) {
                 if (event.isPost()) {
                     switch (mode.get()) {
                         case "Old Grim":
